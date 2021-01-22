@@ -329,5 +329,7 @@ for formal in the_number_formal:
     print("The formal way to all numbers is " + str(formal) + end)
 # im sure there is an even faster way than this but 
 # the second way looks much cleaner bravo 
+
+
         
 
