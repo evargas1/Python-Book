@@ -236,6 +236,97 @@ def nice_message(persons):
 nice_message(magicans_creeps[:])
 print(magicans_creeps)
 
+def all_toppings(*toppings):
+    # the astrich allows many objects to run through
+    """Will return toppings in a tuple"""
+    print(toppings)
+
+
+def print_vertical_toppings(*toppings):
+    """Will print a list vertically"""
+    print("\nThese are all the toppings you have requested")
+    for top in toppings:
+        print("-  " + top)
+
+
+# the astrich serves as very important in this code as a list is not being run
+
+def making_a_pizza(size, *toppings):
+    """Will take into account size and any topping you would like."""
+    print("\nGreat so you will like a " + str(size) + " inch pizza with these toppings: ")
+    for top in toppings:
+        print("-  " + top)
+
+
+
+making_a_pizza(16, 'mushrooms', 'roni', 'pineapple', 'sausage')
+# very important for the call to be after the function otherwise error will occur
+
+
+def build_portfilo(first_name, last_name, **user_info):
+    """Will save info on a person to a dictionary"""
+    user_portfilo = {}
+    user_portfilo['first'] = first_name.title()
+    # the key will be the title first and the value will be whatever argum is passed
+    user_portfilo['last'] = last_name.title()
+    for key, value in user_info.items():
+        user_portfilo[key] = value
+    return user_portfilo
+
+
+student_1 = build_portfilo('maxilane', 'davison', school= 'harvard', location= 'Boston', age= 18, field= 'compsci')
+print(student_1)
+
+
+def building_a_sandwhich(*inside):
+    # the astrich ensures that will accept as many items as wanted
+    """Will accept everything you would like added to the sandwhich"""
+    print("\nFollowing items will be added to your sandwhich: ")
+    for item in inside:
+        print("-   " + item.title())
+
+        # will return a tuple as it recives a tuple
+
+
+building_a_sandwhich('ham', 'whole wheat bread', 'lettuce', 'green peppers', 'cheese')
+building_a_sandwhich('no toppings')
+
+
+def sandwhich_list(inside):
+    """Will print all items you want from a passed list"""
+    print("\nThe following items from your list have been added")
+    for item in inside:
+        print("-  " + item.title())
+
+
+my_toppings = ['chees', 'lettuce', 'bread', 'green onions', 'mushrooms']
+sandwhich_list(my_toppings)
+
+
+me = build_portfilo('estrella', 'vargas', age= 17, height= '172cm', title= 'student')
+print(me)
+
+
+def car_info(model, year_manfactured, **more_info):
+    """Save info about a car in a dictionary"""
+    car_in = {}
+    car_in['model'] = model.title()
+    car_in['year made'] = year_manfactured
+    # will it be stored as a string? I think yes,
+    # it stores in whatever way you input it which means
+    # whenever you go back to work on it you will have to convert it
+    for key, value in more_info.items():
+        car_in[key] = value
+    return car_in
+
+
+first_car = car_info('honda', 2003, color= 'red', mpg= '5 miles')
+# I think in order to use serveral args you need to store it in a variable first
+# and than you can proceed to print it out
+print(first_car)
+
+
+
     
 
 
