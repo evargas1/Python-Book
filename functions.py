@@ -226,7 +226,15 @@ def list_all_names(names):
     for person in names:
         print(person)
 
-list_all_names(magicans_creeps)
+list_all_names(magicans_creeps[:])
+
+def nice_message(persons):
+    """Prints a cutie message to all people"""
+    for person in persons:
+        print("We are so happy to have you " + person.title() + " Welcome!")
+
+nice_message(magicans_creeps[:])
+print(magicans_creeps)
 
     
 
