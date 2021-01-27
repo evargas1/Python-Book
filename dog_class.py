@@ -128,12 +128,143 @@ class Car():
         """Will print one statment with all the car info"""
         print("Your car: " + self.model.title() + " " +  self.color.title() +  " " + str(self.year))
 
-    def odometer_milage(self):
-        """Print showing cars milage default value 0"""
-        print("This car has " + str(self.odometer) + " miles.")
+    def read_odemeter(self):
+        """Will print current miles on car"""
+        print("Your car currently has " + str(self.odometer) + " miles on it")
+
+    def update_odometer(self, milage):
+        """will confirm that number being added is not less that the odmeter"""
+        if milage >= self.odometer:
+            self.odometer = milage
+        else:
+            print("Hey you can't roll back an odmeter!")
+
+    def increament_odometer(self, miles):
+        """add as many miles as driven on the car"""
+        if miles >= self.odometer:
+            self.odometer += miles
+        else:
+            print("Silly you can't roll back an odometer!")
+    
+    # these methods are currently keeping track of all the new miles being added constanly 
+    # its storing information some how.
 
 
 print("\nThis will begin the car example \n")
 my_car = Car('honda', 'green', 2003)
 my_car.desriptive_name()
-my_car.odometer_milage()
+my_car.update_odometer(20)
+my_car.read_odemeter()
+my_car.increament_odometer(200)
+my_car.read_odemeter()
+my_car.increament_odometer(-500)
+
+
+class Classy():
+    """Will show infomation on a cool resturant"""
+
+    def __init__(self, resturant_name, cuisne_type, city='', rating=''):
+        self.resturant_name = resturant_name
+        self.cuisne_type = cuisne_type
+        self.city = city
+        self.rating = rating
+        self.number_served = 0
+
+    def people_served(self, people):
+       
+        self.number_served += people
+            # the plus sign allows you add people served
+            # throughout the span of
+
+    def print_people_served(self):
+        """will print todtal number of people have been served."""
+        print("There are a total of " + str(self.number_served) + " being served right now")
+
+    def increament_people_served(self, total_people):
+        self.number_served += total_people
+        print("Great today a total of " + str(self.number_served) + " people were served today")
+
+    def describe_rest(self):
+        print(self.resturant_name.title() + " cool place to pick!!")
+        print(self.cuisne_type.title() + " love it too!!")
+        
+  
+
+    def open_resturant(self):
+        """Will let you know we are open"""
+        print("We are open today at 1" )
+
+
+rudina_rest = Classy('night stars', 'kimbap')
+rudina_rest.print_people_served()
+# this method changes th value of the attributes by 
+# accessing the attribute but is dangeous because
+# it posses a sercuity threat since anyone can enter the code
+
+rudina_rest.people_served(3)
+rudina_rest.print_people_served()
+rudina_rest.people_served(60)
+rudina_rest.print_people_served()
+rudina_rest.increament_people_served(50)
+# works i wanted it to continue adding on to the number as needed
+rudina_rest.people_served(2)
+rudina_rest.print_people_served
+
+
+
+
+
+my_rest_2 = Resturant('cloudy day', 'fried rice', 'chicago', 3.4)
+
+class User_port():
+    """will be the infomation for a user portfilo."""
+    def __init__(self, first_name, last_name, age, height, location):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.height = height
+        self.location = location
+        self.login_attempts = 0
+
+    def attempts(self):
+        """will print the number of attempts """
+
+        print("Great so the number of attempts right now is " + str(self.login_attempts))
+
+
+    def increament_login_attempts(self):
+        """will add one to every new login attemot"""
+        self.login_attempts += 1
+        
+
+    def reset_login_attempts(self):
+        """will reset the value of attempts to 0 be sure to call attempts()"""
+        self.login_attempts = 0
+        
+    def describe_user(self):
+        """Prints all the general infomation"""
+        print("Your first name: \t " + self.first_name.title())
+        print("Your last name: \t" + self.last_name.title())
+        print("You are " + str(self.age) + " years old cool!")
+        print("Wow you are " + str(self.height) + " cm tall.")
+        print("Loacted: \t" + self.location.title())
+
+
+    def welcome_mess(self):
+        """welcome message to all new users"""
+        print("Hey welcome to the home page once again! " + self.first_name.title())
+
+harris = User_port('tiara', 'harris', 25, 180, 'south korea')
+harris.describe_user()
+harris.increament_login_attempts()
+harris.attempts()
+harris.increament_login_attempts()
+harris.attempts()
+# the print statment has been saved to one function called attempts
+harris.increament_login_attempts()
+harris.attempts()
+harris.increament_login_attempts()
+harris.attempts()
+# it works it adds one every time its run now to reset it o -- o 
+harris.reset_login_attempts()
+harris.attempts()
