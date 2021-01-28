@@ -268,3 +268,111 @@ harris.attempts()
 # it works it adds one every time its run now to reset it o -- o 
 harris.reset_login_attempts()
 harris.attempts()
+
+
+class Car():
+    """This will return info on a new car"""
+
+    def __init__(self, model, color, year):
+        """ Initializing all the sttributes to describe a car"""
+        self.model = model
+        self.color = color
+        self.year = year
+        # setting a default value / optional value
+        self.odometer = 0
+
+    def desriptive_name(self):
+        """Will print one statment with all the car info"""
+        print("Your car: " + self.model.title() + " " +  self.color.title() +  " " + str(self.year))
+
+    def read_odemeter(self):
+        """Will print current miles on car"""
+        print("Your car currently has " + str(self.odometer) + " miles on it")
+
+    def update_odometer(self, milage):
+        """will confirm that number being added is not less that the odmeter"""
+        if milage >= self.odometer:
+            self.odometer = milage
+        else:
+            print("Hey you can't roll back an odmeter!")
+
+    def increament_odometer(self, miles):
+        """add as many miles as driven on the car"""
+        if miles >= self.odometer:
+            self.odometer += miles
+        else:
+            print("Silly you can't roll back an odometer!")
+
+class Battery():
+    """Intialize a new class to model an electrics cars battery"""
+    def __init__(self, battery_size=70):
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        """will print statement with the current battery size"""
+        print("The battery size is " + str(self.battery_size) + "-kwh.")
+
+    def get_range(self):
+        """will print average mph depending on battery size"""
+        if self.battery_size == 70:
+            range = 240
+        elif self.battery_size == 85:
+            range = 270
+        message = ("This car can go approximatly " + str(range) + " miles per hour!")  
+        print(message)  
+
+
+class Electric_car(Car):
+    """Intialize a sub class for car that should inherit all the same propeteries"""
+    def __init__(self, model, color, year):
+        """will print the infomation about a car"""
+        super().__init__(model, color, year)
+        self.battery = Battery()
+    
+        # when an attribute is added here it will always need a default value to function properly.
+
+    def fill_gas_tank(self):
+        """will print message this car does not have a gas tank"""
+        print("Silly electric cars don't have a gas tank")
+
+
+my_tesla = Electric_car('tesla', 'white', '2003')
+my_tesla.desriptive_name()
+my_tesla.battery.describe_battery()
+# it is connected to the main parent program!
+my_tesla.battery.get_range()
+
+
+class Classy():
+    """Will show infomation on a cool resturant"""
+
+    def __init__(self, resturant_name, cuisne_type, city='', rating=''):
+        self.resturant_name = resturant_name
+        self.cuisne_type = cuisne_type
+        self.city = city
+        self.rating = rating
+        self.number_served = 0
+
+    def people_served(self, people):
+       
+        self.number_served += people
+            # the plus sign allows you add people served
+            # throughout the span of
+
+    def print_people_served(self):
+        """will print todtal number of people have been served."""
+        print("There are a total of " + str(self.number_served) + " being served right now")
+
+    def increament_people_served(self, total_people):
+        self.number_served += total_people
+        print("Great today a total of " + str(self.number_served) + " people were served today")
+
+    def describe_rest(self):
+        print(self.resturant_name.title() + " cool place to pick!!")
+        print(self.cuisne_type.title() + " love it too!!")
+        
+  
+
+    def open_resturant(self):
+        """Will let you know we are open"""
+        print("We are open today at 1" )
