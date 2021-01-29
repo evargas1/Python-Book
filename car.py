@@ -1,10 +1,43 @@
-import car_info as c
+class Car():
+    """This will include infomation about a car"""
+    def __init__(self, model, color, year):
+        """choosing my main attributes for this function"""
+        self.model = model
+        self.color = color
+        self.year = year
+        self.read_od = 0
 
-first_car = car_info('chev', 2000, color='blue', size='4 seater')
-print(first_car)
+    def get_descriptive_name(self):
+        """Will print a clean line of all the info collected"""
+        print("Hey your car is a " +
+            self.model.title() + 
+            " and its " +
+            self.color.title() + 
+            ". Relatively new its a " + 
+            str(self.year) + 
+            " model.")
 
-# many different ways to import but the best way is one function as needed
-# or a whole module if more than 5 functions will be used
-# but if all must be imported use an alias to spotlight the actual function and not 
-# the name of the function
+    def read_odemeter(self):
+        """Will print current miles on odometer"""
+        print("Your car currently has " + str(self.read_od) + " miles on it.")
 
+    def update_odometer(self, milage):
+        """update the milage if its more than current miles"""
+        if milage >= self.read_od:
+            self.read_od = milage
+        else:
+            print("You can't roll back an odomter silly")
+    
+    def increament_odometer(self, miles):
+        """will add on any new miles that may be needed. Still need to call read_odemter"""
+        # the second variable can be named anything because it depends on the input
+        self.read_od += miles
+
+
+
+
+
+tesla = Car('tesla', 'blue', '2001')
+tesla.get_descriptive_name()
+tesla.update_odometer(30)
+tesla.read_odemeter()
