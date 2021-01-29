@@ -349,126 +349,132 @@ my_tesla.battery.upgrade_battery()
 my_tesla.battery.get_range()
 
 
-# class ClassyL():
-#     """Will show infomation on a cool resturant"""
+class ClassyL():
+    """Will show infomation on a cool resturant"""
 
-#     def __init__(self, resturant_name, cuisne_type):
-#         self.resturant_name = resturant_name
-#         self.cuisne_type = cuisne_type
-#         self.number_served = 0
+    def __init__(self, resturant_name, cuisne_type):
+        self.resturant_name = resturant_name
+        self.cuisne_type = cuisne_type
+        self.number_served = 0
        
 
-#     def people_served(self, people):
+    def people_served(self, people):
        
-#         self.number_served += people
-#             # the plus sign allows you add people served
-#             # throughout the span of
+        self.number_served += people
+            # the plus sign allows you add people served
+            # throughout the span of
 
-#     def print_people_served(self):
-#         """will print todtal number of people have been served."""
-#         print("There are a total of " + str(self.number_served) + " being served right now")
+    def print_people_served(self):
+        """will print todtal number of people have been served."""
+        print("There are a total of " + str(self.number_served) + " being served right now")
 
-#     def increament_people_served(self, total_people):
-#         self.number_served += total_people
-#         print("Great today a total of " + str(self.number_served) + " people were served today")
+    def increament_people_served(self, total_people):
+        self.number_served += total_people
+        print("Great today a total of " + str(self.number_served) + " people were served today")
 
-#     def describe_rest(self):
-#         print(self.resturant_name.title() + " cool place to pick!!")
-#         print(self.cuisne_type.title() + " love them too!!")
+    def describe_rest(self):
+        print(self.resturant_name.title() + " cool place to pick!!")
+        print(self.cuisne_type.title() + " love them too!!")
         
 
-#     def open_resturant(self):
-#         """Will let you know we are open"""
-#         print("We are open today at 1" )
+    def open_resturant(self):
+        """Will let you know we are open"""
+        print("We are open today at 1" )
 
 
-# class IceCreamStand(ClassyL):
-#     """Type of resturnat that serves ice cream"""
+class IceCreamStand(ClassyL):
+    """Type of resturnat that serves ice cream"""
 
-#     def __init__(self, resturant_name, cuisne_type):
-#         """inheriting from the super class"""
+    def __init__(self, resturant_name, cuisne_type):
+        """inheriting from the super class"""
 
-#         super().__init__(resturant_name, cuisne_type)
-#         self.flavors = ['vanilla', 'choco', 'peanut butter', 'strawberry', 'mint']
-
-
-#     def avaiable_flavors(self):
-#         """prints all the ice cream flavors"""
-#         for flavor in self.flavors:
-#             print("Right now we have \t" + flavor.title() + " flavored ice cream!!")
-
-# rudina_rest = IceCreamStand('night stars', 'noodles')
-# rudina_rest.describe_rest()
-# rudina_rest.avaiable_flavors()
+        super().__init__(resturant_name, cuisne_type)
+        self.flavors = ['vanilla', 'choco', 'peanut butter', 'strawberry', 'mint']
 
 
-# class UserEnter():
-#     """will be the infomation for a user portfilo."""
-#     def __init__(self, first_name, last_name, age, height, location):
-#         self.first_name = first_name
-#         self.last_name = last_name
-#         self.age = age
-#         self.height = height
-#         self.location = location
-#         self.login_attempts = 0
+    def avaiable_flavors(self):
+        """prints all the ice cream flavors"""
+        for flavor in self.flavors:
+            print("Right now we have \t" + flavor.title() + " flavored ice cream!!")
 
-#     def attempts(self):
-#         """will print the number of attempts """
-
-#         print("Great so the number of attempts right now is " + str(self.login_attempts))
+rudina_rest = IceCreamStand('night stars', 'noodles')
+rudina_rest.describe_rest()
+rudina_rest.avaiable_flavors()
 
 
-#     def increament_login_attempts(self):
-#         """will add one to every new login attemot"""
-#         self.login_attempts += 1
+class UserEnter():
+    """will be the infomation for a user portfilo."""
+    def __init__(self, first_name, last_name, age, height, location):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.height = height
+        self.location = location
+        self.login_attempts = 0
+
+    def attempts(self):
+        """will print the number of attempts """
+
+        print("Great so the number of attempts right now is " + str(self.login_attempts))
+
+
+    def increament_login_attempts(self):
+        """will add one to every new login attemot"""
+        self.login_attempts += 1
         
 
-#     def reset_login_attempts(self):
-#         """will reset the value of attempts to 0 be sure to call attempts()"""
-#         self.login_attempts = 0
+    def reset_login_attempts(self):
+        """will reset the value of attempts to 0 be sure to call attempts()"""
+        self.login_attempts = 0
         
-#     def describe_user(self):
-#         """Prints all the general infomation"""
-#         print("Your first name: \t " + self.first_name.title())
-#         print("Your last name: \t" + self.last_name.title())
-#         print("You are " + str(self.age) + " years old cool!")
-#         print("Wow you are " + str(self.height) + " cm tall.")
-#         print("Loacted: \t" + self.location.title())
+    def describe_user(self):
+        """Prints all the general infomation"""
+        print("Your first name: \t " + self.first_name.title())
+        print("Your last name: \t" + self.last_name.title())
+        print("You are " + str(self.age) + " years old cool!")
+        print("Wow you are " + str(self.height) + " cm tall.")
+        print("Loacted: \t" + self.location.title())
 
 
-#     def welcome_mess(self):
-#         """welcome message to all new users"""
-#         print("Hey welcome to the home page once again! " + self.first_name.title())
-
-
-
-# class Privileges():
-#     """will peform one function for the admin, printing his privelages"""
-#     def __init__(self):
-#         self.privel_list = ['can add post', 'can block user', 'can delete post']
-
-
-#     def show_privelages(self):
-#         for p in self.privel_list:
-#             print("As the admin you can: \t" + p.title())
+    def welcome_mess(self):
+        """welcome message to all new users"""
+        print("Hey welcome to the home page once again! " + self.first_name.title())
 
 
 
-# class Admin(UserEnter):
-#     """specila class for admin subclass """
-#     def __init__(self, first_name, last_name, age, height, location):
+class Privileges():
+    """will peform one function for the admin, printing his privelages"""
+    def __init__(self):
+        self.privel_list = ['can add post', 'can block user', 'can delete post']
 
-#         super().__init__(first_name, last_name, age, height, location)
-#         self.privel = Privileges()
+
+    def show_privelages(self):
+        for p in self.privel_list:
+            print("As the admin you can: \t" + p.title())
+
+
+
+class Admin(UserEnter):
+    """specila class for admin subclass """
+    def __init__(self, first_name, last_name, age, height, location):
+
+        super().__init__(first_name, last_name, age, height, location)
+        self.privel = Privileges()
 
  
 
+# This last example whipped my butt! honestly almosted cried
+# learned that to access the main and child class you need to call
+# first the child class because the two are connected
+# and addtional classes added to the child class need an ___init___ method
+# but depending on how many attributes you need it should be only self when
+# possible. Breaking off different functions to classes for the children classes
+# is super helpful! the class name just needs to be added as an attribute name
+# to the main child class to be able to access all functions
 
-
-
-# harris = Admin('tiara', 'harris', 25, 180, 'south korea')
-# harris.describe_user()
-# harris.privel.show_privelages()
+harris = Admin('tiara', 'harris', 25, 180, 'south korea')
+harris.describe_user()
+harris.privel.show_privelages()
 
 
 
