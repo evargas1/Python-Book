@@ -1,0 +1,9 @@
+In python you can organize and access list.
+In python you can recieve inputs from users.
+In python you can retrieve and save large amounts of data. Big data.
+In python you can wirte object orientated programming for certian 3D things.
+In python you can perform complex math operations.
+In python you can anchor to values together in dictionaries.
+In python you can build webapges from scratch.
+In python you can solve real world problems!
+In python you can have fun!
