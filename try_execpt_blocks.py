@@ -80,6 +80,31 @@ def show_words(filename):
             print(item)
 
 
-filename = 'mouse.txt'
-show_words(filename)
+filenames = 'cats.txt'
 
+def count_one_word(file):
+    """will count one word you choose"""
+
+    try:
+        with open(file) as file_object:
+            contents = file_object.read()
+            # list_form = contents.split()
+            # will not work beacuse it transforms the doc to a list
+            # dont need a list to count one word that re-appears
+            # to do so requires a single string doc
+            #
+
+            # the split function comes in handy in many siuations!
+         
+    except FileNotFoundError:
+        pass
+    else:
+        
+        x = contents.lower().count('the')
+        print(x)
+            
+
+
+
+file = 'pride_and_p.txt'
+count_one_word(file)
