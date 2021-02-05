@@ -1,0 +1,225 @@
+/* main colors */
+* {
+  padding: 0;
+  margin: 0;
+  }
+:root {
+  --brown: rgb(65, 48, 48);
+  --green: rgb(162, 187, 162) ;
+  --pink: rgb(240, 181, 191) ;
+  --black: rgb(29, 28, 28);
+
+  }
+
+.margin-set{
+  z-index: 9;
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 100vh;
+}
+.banner-img{
+  background-image: url(./images/mirror\ .jpg);
+  width: 55vw;
+  height: 100vh;
+  float: right;
+  z-index: -2;
+  top: 0;
+  right: 0;
+ 
+}
+.menu-bar-section{
+  z-index: 99;
+  display: inline-block;
+  width: 550px;
+  margin-top: 20px;
+  
+}
+.banner-sec{
+  z-index: -1;
+}
+.title{
+  width: 100px;
+}
+.col{
+  display: inline-block;
+  width: 100%;
+}
+.col h2{
+  display: inline-block;
+  color: var(--black);
+  
+}
+.col .fas{
+  display: inline-block;
+  z-index: 99;
+  width: auto;
+  margin: 5px;
+  
+}
+.col h2{
+  margin: 0;
+  padding: 0;
+  margin: 5px;
+  padding-left: 20px;
+}
+.info{
+  display: inline-block;
+  
+}
+.social{
+  float: right;
+}
+.search{
+  float: right;
+}
+.logo{
+  margin-left: 10px;
+}
+
+/* --------- Box on on the open page -------- */
+.left-box{
+  bottom: 0;
+  width: 550px;
+  margin-top: 10rem;
+  position: relative;
+}
+.left-box h1{
+  font-size: 60px;
+  
+  text-transform: uppercase;
+  text-shadow: 5px 3px 0 rgba(0 0 0 / 0.20);
+}
+.left-box h5{
+  margin: 10px;
+}
+.left-box p{
+  font-size: 15px;
+}
+.small-but{
+  width: 400px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.small-but button{
+  font-size: 17px;
+  padding: 10px 15px;
+  border: 3px solid var(--pink);
+  border-radius: 20px;
+  background-color: #fff;
+  font-weight: 500;
+  color: var(--brown);
+  font-family: serif;
+  
+}
+.small-but button:hover{
+  border: 3px solid var(--brown);
+  background-color: var(--pink);
+  color: #fff;
+  transition: 0.5s ease-in-out;
+}
+
+
+/* -----------code for the arrow and the play button ---------- */
+
+.small-box-two{
+  position: absolute;
+  bottom: 15%;
+  left: 42.5%;
+  width: 70px;
+  height: 100px;
+
+}
+.but-1{
+  background-color: var(--black);
+  text-align: center;
+  padding: 20px 10px;
+}
+.but-2{
+  background-color: var(--brown);
+  text-align: center;
+  padding: 20px 10px;
+  
+
+}
+
+/* ----------- social and contact menu section------- */
+
+.social{
+  margin-top: 20px;
+  position: absolute;
+  display: inline-block;
+  right: 15%;
+}
+.social .fab{
+  display: inline-block;
+  padding: 8px;
+  color: var(--black);
+}
+.social h3{
+  display: inline-block;
+  font-size: 20px;
+  color: var(--black);
+  margin-left: 30px;
+  transition: 0.5s;
+
+}
+.social h3:hover{
+  /* transform: translateY(-5px); */
+  color: var(--pink);
+}
+
+
+/* -------gallery panel section ------- */
+.row-gallery{
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.two-main-sec{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+}
+.col2-3{
+  flex-basis: 60%;
+
+}
+.first-row{
+  display: flex;
+  display: inline-block;
+}
+.col-60{
+  display: inline-block;
+  flex: 60%;
+  width: auto;
+}
+.info{
+  width: 30%;
+}
+.img-sec{
+  width: 60%;
+}
+.img-sec img{
+  width: auto;
+
+}
+.col-40{
+  display: inline-block;
+  flex: 40%;
+  width: auto;
+}
+
+
+.col1-3{
+  flex-basis: 30%;
+}
+
+
+
+
+
+
+  

@@ -1,0 +1,7 @@
+-- opening banner will include the menu bar that will slide open 
+= company logo 
+= creator of furniture name 
+= search bar button font awesome 
+= 4 social media buttons 
+= the name of the special along with a short description and a button 
+= the background picture should take up 1/3 of the right nad side of the page 
