@@ -25,13 +25,13 @@ country
 cheese 
 ------------------------
 
-LEMON 
+AMERICAN 
 
-citrus
-sour 
-lime 
-fruit 
-yellow 
+United States
+Apple pie
+Nationality
+country
+cheese 
 ------------------------
 
 TEDDY BEAR 
