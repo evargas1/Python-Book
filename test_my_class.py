@@ -72,15 +72,8 @@ class TestEmployee(unittest.TestCase):
     #     self.assertEqual('Janet Daniles. You have a current salary of $35000', self.my_person.see_all_info())
 
 
-    def setUp(self):
-    
-        self.person = Employee('brad', 'janice', 60000)
-        self.increase = (30000)
-
-
-    def test_give_default_raise(self):
-        self.person.you_get_raise(self.increase)
-        self.assertIn(self.increase, self.person.increase)
+    def test_first_last(self):
+        formatted_print = Employee()
         
         
 

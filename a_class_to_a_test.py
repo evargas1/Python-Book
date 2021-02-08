@@ -45,7 +45,7 @@
 class Employee():
     """collect infomation on a working employee at a company"""
 
-    def __init__(self, first_name, last_name, salary):
+    def __init__(self, first_name, last_name, salary=int):
         """define the main attributes in this program"""
         self.first_name = first_name
         self.last_name = last_name
@@ -60,7 +60,7 @@ class Employee():
     def you_get_raise(self, pay=''):
         """when called witll give you the option of adding a raise defaulut"""
         if pay:
-            self.salary += pay
+            self.salary += int(pay)
         else:
             self.salary += self.increase
         print("Hey your new salary is now: $" + str(self.salary)  )
