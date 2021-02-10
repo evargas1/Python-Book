@@ -12,18 +12,26 @@ class RandomWalk():
 # all walks start at the point (0,0)
         self.x_values = [0]
         self.y_values = [0]
+    
+       
+    def get_step(self):
+        """will include the code for this program to run"""
+
+        direction = choice([1, -1])
+        # telling the choice function to pick from these options
+        step_size = choice([1, 2, 3, 4, 5, 6, 7, 8])
+        step = direction * step_size
+
+        return(step)
+
+
 
     def fill_walk(self):
         """will calcualte the number of random steps"""
-        while len(self.x_values) < len(self.y_values):
-            x_direction = choice([1, -1])
-            x_distance = choice([0, 1, 2, 3, 4])
-            x_step = x_direction * x_distance
+        while len(self.x_values) < self.num_points:
 
-
-            y_direction = choice([1, -1])
-            y_distance = choice([0, 1, 2, 3, 4])
-            y_step = y_direction * y_distance
+            x_step = self.get_step()
+            y_step = self.get_step()
 
             # reject the cordinates if they are both 0
             if x_step and y_step == 0:
@@ -35,4 +43,10 @@ class RandomWalk():
 
             self.x_values.append(next_x)
             self.y_values.append(next_y)
+
+
+janet = RandomWalk()
+janet.fill_walk()
+
+
 
