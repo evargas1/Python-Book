@@ -1,6 +1,7 @@
 import pygal
 from dice_roll import Die
-from pygal.style import NeonStyle
+
+import lxml
 
 die = Die()
 
@@ -25,7 +26,7 @@ print(freq)
 
 # visulaize the chart
 
-hist = pygal.Bar(style=NeonStyle)
+hist = pygal.Bar()
 
 hist._title = "Results of rolling one dice 1,000 times"
 hist._x_labels = ['1', '2', '3', '4', '5', '6']
@@ -33,4 +34,8 @@ hist._x_title = "Different Sides of The Dice"
 hist._y_title = "Frequency of Results"
 
 hist.add('D6', freq)
-hist.render_to_file('roll_visual.svg')
+hist.render_in_browser()
+
+
+
+hist.render()
