@@ -3,25 +3,32 @@ from matplotlib import pyplot as plt
 from datetime import datetime
 
 
-filename = 'sitka_weather_2014.csv'
+filename = 'death_valley_2014.csv'
+# the uselfullness in doing this is that 
+# it makes your code more usable by and easy to simplt
+# change the filename and see a nice graph
 with open(filename) as f:
     reader = csv.reader(f)
     header_row = next(reader)
     print(header_row)
-
+# isnt this why data scientist spend time mining 
 
     print("\n Should print all the dates ")
     dates, highs, lows = [], [], []
 
     for row in reader:
-        current_data = datetime.strptime(row[0], "%Y-%m-%d")
-        dates.append(current_data)
+        try:
 
-        high = int(row[1])
-        highs.append(high)
+            current_data = datetime.strptime(row[0], "%Y-%m-%d")
+            high = int(row[1])
+            low = int(row[3])
 
-        low = int(row[3])
-        lows.append(low)
+        except ValueError:
+            print(current_data, " missing data.")
+        else:
+            dates.append(current_data)
+            lows.append(low)
+            highs.append(high)
 
     print(dates)
     print(highs)
@@ -55,9 +62,10 @@ with open(filename) as f:
 
 
 fig = plt.figure(dpi=100, figsize=(20, 6))
+y = np.([range(100)
 plt.plot(dates, highs, c='red', alpha=0.5)
 plt.plot(dates, lows, c='blue', alpha=0.5)
-plt.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
+plt.fill_between(dates, highs, lows, facecolor='green', alpha=0.1)
 # the shading being used here helps us better see and visualize the 
 # main differnece in the tempeture
 
