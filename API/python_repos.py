@@ -14,9 +14,11 @@ def get_the_url(url_link):
     """returns the url when requested"""
     r = requests.get(url_link)
     return r
+    
 
 r = get_the_url(url)
 print("Status code: ", get_status_code(url))
+print("\n For test to what the url will look liked", r)
 
 # store the API repsonse in a varibale 
 response_dict = r.json()
