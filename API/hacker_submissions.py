@@ -11,7 +11,7 @@ except EnvironmentError:
     print("Could not be found")
 else:
     print("Status code: ", r.status_code)
-g
+
 # process infomation about each submisson
 submissions_id = r.json()
 submissions_dicts = []
